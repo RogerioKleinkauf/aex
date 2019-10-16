@@ -89,8 +89,6 @@ class AEX{
             "codigo_tipo_carga" => $type
         );
 
-        print_r($request);
-
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $this->url . "envios/calcular",
@@ -126,8 +124,6 @@ class AEX{
             "codigo_tipo_carga" => $type
         );
 
-        print_r($request);
-
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $this->url . "envios/solicitar_servicio",
@@ -162,8 +158,6 @@ class AEX{
             "entrega" => $delivery
         );
 
-        print_r($request);
-
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $this->url . "envios/confirmar_servicio",
@@ -191,8 +185,6 @@ class AEX{
             "codigo_operacion" => $operationCode
         );
 
-        print_r($request);
-
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $this->url . "envios/tracking",
@@ -217,9 +209,7 @@ class AEX{
             "codigo_autorizacion" => $this->getAuthorization(),
             "codigos_producto" => $products
         );
-
-        print_r($request);
-
+       
         $curl = curl_init();
         curl_setopt_array($curl, array(
             CURLOPT_URL => $this->url . "inventario/existencia",
